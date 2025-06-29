@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мої одногрупники</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .bio {
+            display: none;
+        }
+    </style>
+    <script>
+        function showBio(id) {
+            var bios = document.getElementsByClassName("bio");
+            for (var i = 0; i < bios.length; i++) {
+                bios[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td rowspan="3"><img src="anime.gif" alt="Анімація"></td>
+            <th colspan="4">Мої одногрупники</th>
+        </tr>
+        <tr>
+            <td><img src="1.jpg" alt="Фото 1" width="150" onclick="showBio('bio1')"></td>
+            <td><img src="2.jpg" alt="Фото 2" width="150" onclick="showBio('bio2')"></td>
+            <td><img src="3.jpg" alt="Фото 3" width="150" onclick="showBio('bio3')"></td>
+            <td><img src="4.jpg" alt="Фото 4" width="150" onclick="showBio('bio4')"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div id="bio1" class="bio">
+                    <p><strong>ПІБ:</strong> Ковальчук Марія Василівна</p>
+                    <p><strong>Дата народження:</strong> 15.04.2002</p>
+                    <p><strong>Email:</strong> maria@gmail.com</p>
+                    <p><strong>Улюблена мелодія:</strong> Човен Zwyntar</p>
+                </div>
+                <div id="bio2" class="bio">
+                    <p><strong>ПІБ:</strong> Хрестонько Олег Сергійович</p>
+                    <p><strong>Дата народження:</strong> 03.08.2001</p>
+                    <p><strong>Email:</strong> oleg@gmail.com</p>
+                    <p><strong>Улюблена мелодія:</strong> Зірочка Палай Анна Трінчер</p>
+                </div>
+                <div id="bio3" class="bio">
+                    <p><strong>ПІБ:</strong> Скалівській Сергій Миколайович</p>
+                    <p><strong>Дата народження:</strong> 22.11.2000</p>
+                    <p><strong>Email:</strong> serhiy@gmail.com</p>
+                    <p><strong>Улюблена мелодія:</strong> Молоком Антитіла</p>
+                </div>
+                <div id="bio4" class="bio">
+                    <p><strong>ПІБ:</strong> Потапова Катерина Степанівна</p>
+                    <p><strong>Дата народження:</strong> 29.06.2002</p>
+                    <p><strong>Email:</strong> kateryna@gmail.com</p>
+                    <p><strong>Улюблена мелодія:</strong> Гайка з Ямайки Boombox</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h3>Мультимедіа</h3>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує відтворення аудіо.
+    </audio>
+    <br>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        Ваш браузер не підтримує відтворення відео.
+    </video>
+    <br>
+    <a href="audio.mp3" download>Завантажити аудіо</a><br>
+    <a href="video.mp4" download>Завантажити відео</a>
+    <a style="display: block; text-align: right" href="D:\front-end_Sondei_ІПЗ-14\lab1_Sondei\index.html">На головну</a>
+</body>
+</html>
